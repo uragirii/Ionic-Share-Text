@@ -6,6 +6,10 @@
   right: 0;
   top: 50%;
   transform: translateY(-50%);
+  -webkit-user-select: text;
+  -moz-user-select: text;
+  -ms-user-select: text;
+  user-select: text;
 }
 
 #container strong {
@@ -24,4 +28,14 @@
 
 #container a {
   text-decoration: none;
+}
+
+/* DOES NOT WORK - not specific enough */
+.action-sheet-group {
+  background: #e5e5e5;
+}
+
+/* Works - pass "my-custom-class" in cssClass to increase specificity */
+.my-custom-class .action-sheet-group {
+  background: #e5e5e5;
 }
